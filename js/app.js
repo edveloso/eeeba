@@ -4,7 +4,7 @@ app.controller('UserController', ['$scope', '$window', 'toaster', function ($sco
 	$scope.isAdmin = false;	
 
 	$scope.createUser = function(userEmail, userPassword){
-		alert(userEmail + userPassword);
+		
 		var ref = new Firebase("https://shining-heat-6825.firebaseio.com/");
 		ref.createUser({
 			email    : userEmail,
@@ -14,6 +14,7 @@ app.controller('UserController', ['$scope', '$window', 'toaster', function ($sco
 				console.log("Error creating user:", error);
 			} else {
 				console.log("Successfully created user account with uid:", userData.uid);
+				alert(userEmail + ' cadastrado com sucesso!');
 			}
 		});
 

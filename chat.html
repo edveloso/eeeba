@@ -74,7 +74,7 @@
        <div class="col-md-4 col-md-offset-1">
          <ol class="breadcrumb white">
            <li class="text-right"><a href="#">Usuário <span ng-show="usuario">: {{usuario.name}}</span>           </a></li> 
-           <a href="#" ng-show="usuario"  ng-click="logout()"> Logout</a>
+           <a href="#" ng-show="usuario"  ng-click="logout()">Sair</a>
          </ol>
 
        </div>
@@ -89,8 +89,8 @@
 
          <div id='messagesDiv'></div>
          <br>
-         <input type='hidden' id='nameInput' value="{{usuario.name}}" placeholder='Nome'>
-         <!--input type='text' id='messageInput' placeholder='Menssagem' size="45" -->
+         <input type='hidden' id='nameInput' value="{{userName}}"  placeholder='Email'>
+         <!--input type='text' id='messageInput' placeholder='Menssagem' size="45"-->
          
          
            <div class="input-group">
@@ -134,15 +134,19 @@
             <form id="frmLogin" role="form">
              <h2>Login</h2>
             
+            <div class="form-group">
+              <label for="txtUser">Nome de usuário</label>
+              <input type="text" class="form-control" ng-model="userName" id="txtUser" placeholder="Usuário" name="userName" />
+            </div>
              <div class="form-group">
-              <label for="txtEmail">Nome de usuário</label>
-              <input type="text" class="form-control" ng-model="userName" id="txtEmail" placeholder="Nome de usuário" name="userName" />
+              <label for="txtEmail">Endereço de email</label>
+              <input type="text" class="form-control" ng-model="userEmail" id="txtEmail" placeholder="Email" name="userEmail" />
             </div>
             <div class="form-group">
               <label for="txtPass">Senha</label>
               <input type="password" class="form-control" ng-model="pass" id="txtPass" placeholder="Senha" name="password" />
             </div>
-            <button type="submit" class="btn btn-info btn-block" ng-click="login(userName, pass)" >Login</button>
+            <button type="submit" class="btn btn-info btn-block" ng-click="login(userEmail, pass)" >Login</button>
                     </form>
           </div>
       </div>
