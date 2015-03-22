@@ -2,7 +2,9 @@ body{
 	background-color: #ededed;
 }
 
-
+.container {
+ max-width: 1170px;
+}
 
 #title_icon {
 	background-image: url("../img/iiieeba2015_logo2.png")   ;
