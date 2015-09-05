@@ -2,6 +2,18 @@ var app = angular.module("app",['toaster']);
 app.controller('UserController', ['$scope', '$window', 'toaster', function ($scope, $window, toaster) {
 	$scope.usuario; 
 	$scope.isAdmin = false;	
+	$scope.congressista = {};
+	$scope.versionId = ":";
+
+	$scope.register = function(isValid){
+			if(isValid)
+			alert($scope.nomeCompleto);
+		else
+			 alert('invalid');
+		
+	};
+
+
 
 	$scope.createUser = function(userEmail, userPassword){
 		
